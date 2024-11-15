@@ -1,73 +1,178 @@
-body{
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&display=swap');
+
+/* Reset some default styling */
+* {
+    box-sizing: border-box;
     margin: 0;
-    font-family: "Ubuntu", sans-serif; 
-    font-size: 20px;
-  }
-  .wrapper{
+    padding: 0;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Base styles */
+body {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+}
+
+/* Wrapper for page content */
+.wrapper {
     max-width: 960px;
     margin: 0 auto;
-  }
-  h1{
+    padding: 20px;
+}
+
+/* Header */
+h1 {
     margin: 40px auto;
-    color: crimson;
+    color: #b3003b;
     text-align: center;
-  }
-  ul{
+    font-size: 2em;
+    font-weight: 600;
+}
+
+/* List styles */
+ul {
     padding: 0;
     list-style-type: none;
-  }
-  li{
-    padding: 6px 10px;
+}
+
+li {
+    padding: 16px;
     border: 1px solid #eee;
-    margin: 10px auto;
-  }
-  li h4{
-    color: crimson;
+    margin: 10px 0;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    transition: transform 0.2s;
+}
+
+li:hover {
+    transform: scale(1.02);
+}
+
+li h4 {
+    color: #b3003b;
     margin: 0;
     text-transform: capitalize;
-  }
-  li p{
-    color: #333;
+    font-size: 1.2em;
+}
+
+li p {
+    color: #555;
     margin: 8px 0 0;
-  }
-  footer{
-    background: #eee;
-    padding: 60px;
-    margin-top: 60px;
-  }
-  form{
+}
+
+/* Footer section */
+footer {
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+  align-items: center;
+  max-width: 80vw;
+  background: #eee;
+  padding: 40px 20px;
+  text-align: center;
+  margin: 10px auto;  
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form */
+form {
     max-width: 960px;
     margin: 0 auto;
     text-align: center;
-  }
-  label{
+}
+
+label {
     display: block;
-    font-weight: bold;
-    font-size: 0.8em;
+    font-weight: 600;
+    font-size: 0.85em;
     color: #333;
-    margin: 16px 0 6px;
-  }
-  input, select{
-    padding: 6px;
-    border: 1px solid #e1e1e1;
+    margin: 16px 0 8px;
+}
+
+input, select {
+    outline: 0;
+    padding: 10px;
+    border: 1px solid #ddd;
     border-radius: 4px;
-  }
-  .field{
+    font-size: 1em;
+    width: 100%;
+    max-width: 300px;
+}
+
+.field {
     display: inline-block;
     margin: 0 10px;
-  }
-  button{
+    text-align: left;
+}
+
+button {
     color: white;
     border: 0;
-    background: crimson;
-    padding: 6px;
-    min-width: 80px;
+    background: #b3003b;
+    padding: 10px 40px;
+    font-size: 1em;
+    font-weight: 600;
     border-radius: 4px;
-  }
-  footer a{
+    cursor: pointer;
+    transition: background 0.3s;
+    margin: 20px 0;
+}
+
+button:hover {
+    background: #990033;
+}
+
+a {
     text-align: center;
+    position: fixed;
     display: block;
-    color: #999;
-    margin-top: 40px;
-    font-size: 0.7em;
-  }
+    color: #666;
+    margin-bottom: 0;
+    margin-top: 20px;
+    font-size: 1em;
+}
+ a:hover {
+    color: #b3003b;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    li {
+        padding: 12px;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    .field {
+        display: block;
+        margin: 10px auto;
+    }
+
+    button {
+        width: 100%;
+        max-width: 300px;
+        padding: 10px;
+        margin: 10px 0;
+    }
+}
