@@ -134,12 +134,13 @@ button:hover {
 }
 
 a {
+    display: flex;
+    justify-content: center;
     text-align: center;
     position: fixed;
     display: block;
     color: #666;
-    margin-bottom: 0;
-    margin-top: 20px;
+    margin: 10px auto;
     font-size: 1em;
 }
  a:hover {
